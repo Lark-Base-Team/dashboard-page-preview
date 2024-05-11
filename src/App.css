@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+@import "reset-css";
+html {
+    --text-title: rgba(31, 35, 41, 1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ant-btn-primary {
+    background-color: rgba(20, 86, 240, 1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.main {
+    display: flex;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.main-config {
+    border-top: rgba(222, 224, 227, 1) 1px solid;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.config-panel {
+    width: 340px;
+    flex: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-direction: column;
+    border-left: rgba(222, 224, 227, 1) 1px solid;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form {
+    flex-grow: 1;
+}
+
+.form-item {
+    margin-bottom: 16px;
+    color: var(--text-title);
+}
+
+.ant-picker {
+    width: 100%;
+}
+
+.checkbox-group {
+    row-gap: 8px;
+}
+
+.label {
+    padding-bottom: 8px;
+    font-family: PingFang SC;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+}
+
+.btn {
+    align-self: flex-end;
+}
+
+.number-container {
+    padding: 0 15px;
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.number-container {
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.number-container div {
+    flex-shrink: 0;
+}
+
+.number {
+    font-family: DIN Alternate;
+    font-size: 28vmin;
+    font-weight: 700;
+    line-height: 1em;
+    text-align: center;
+}
+
+.number-title {
+    font-family: PingFang SC;
+    font-size: 6vmin;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.count-down-title-config {
+    font-size: 4vmin;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.count-down-title {
+    font-size: 6vmin;
+}
+
+.container {
+    width: 100%;
+    border: none;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
