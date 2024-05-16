@@ -1,0 +1,353 @@
+@import "reset-css";
+
+body[theme-mode="light"] {
+  --ccm-chart-B50: #f0f4ff;
+  --ccm-chart-B100: #e1eaff;
+  --ccm-chart-B200: #bacefd;
+  --ccm-chart-B300: #82a7fc;
+  --ccm-chart-B400: #4e83fd;
+  --ccm-chart-B500: #3370ff;
+  --ccm-chart-B600: #245bdb;
+  --ccm-chart-B700: #1c4cba;
+  --ccm-chart-B800: #133c9a;
+  --ccm-chart-B900: #0c296e;
+  --ccm-chart-W50: #ecf9fe;
+  --ccm-chart-W100: #d9f3fd;
+  --ccm-chart-W200: #b1e8fc;
+  --ccm-chart-W300: #7edafb;
+  --ccm-chart-W400: #50cefb;
+  --ccm-chart-W500: #14c0ff;
+  --ccm-chart-W600: #049fd7;
+  --ccm-chart-W700: #037eaa;
+  --ccm-chart-W800: #006185;
+  --ccm-chart-W900: #004761;
+  --ccm-chart-P50: #f6f1fe;
+  --ccm-chart-P100: #ece2fe;
+  --ccm-chart-P200: #cdb2fa;
+  --ccm-chart-P300: #ad82f7;
+  --ccm-chart-P400: #935af6;
+  --ccm-chart-P500: #7f3bf5;
+  --ccm-chart-P600: #6425d0;
+  --ccm-chart-P700: #4e1ba7;
+  --ccm-chart-P800: #380d82;
+  --ccm-chart-P900: #270561;
+  --ccm-chart-Y50: #fdf9ed;
+  --ccm-chart-Y100: #faf1d1;
+  --ccm-chart-Y200: #f8e6ab;
+  --ccm-chart-Y300: #f7dc82;
+  --ccm-chart-Y400: #fad355;
+  --ccm-chart-Y500: #ffc60a;
+  --ccm-chart-Y600: #dc9b04;
+  --ccm-chart-Y700: #aa7803;
+  --ccm-chart-Y800: #795101;
+  --ccm-chart-Y900: #5c3a00;
+  --ccm-chart-R50: #fef1f1;
+  --ccm-chart-R100: #fde2e2;
+  --ccm-chart-R200: #fbbfbc;
+  --ccm-chart-R300: #f98e8b;
+  --ccm-chart-R400: #f76964;
+  --ccm-chart-R500: #f54a45;
+  --ccm-chart-R600: #d83931;
+  --ccm-chart-R700: #ac2f28;
+  --ccm-chart-R800: #812520;
+  --ccm-chart-R900: #621c18;
+  --ccm-chart-O50: #fff5eb;
+  --ccm-chart-O100: #feead2;
+  --ccm-chart-O200: #fed4a4;
+  --ccm-chart-O300: #ffba6b;
+  --ccm-chart-O400: #ffa53d;
+  --ccm-chart-O500: #f80;
+  --ccm-chart-O600: #de7802;
+  --ccm-chart-O700: #b26206;
+  --ccm-chart-O800: #8f4f04;
+  --ccm-chart-O900: #6b3900;
+  --ccm-chart-T50: #eafaf8;
+  --ccm-chart-T100: #d5f6f2;
+  --ccm-chart-T200: #a9efe6;
+  --ccm-chart-T300: #64e8d6;
+  --ccm-chart-T400: #14e1c6;
+  --ccm-chart-T500: #00d6b9;
+  --ccm-chart-T600: #04b49c;
+  --ccm-chart-T700: #078372;
+  --ccm-chart-T800: #036356;
+  --ccm-chart-T900: #024b41;
+  --ccm-chart-G50: #f0fbef;
+  --ccm-chart-G100: #d9f5d6;
+  --ccm-chart-G200: #b7edb1;
+  --ccm-chart-G300: #8ee085;
+  --ccm-chart-G400: #62d256;
+  --ccm-chart-G500: #34c724;
+  --ccm-chart-G600: #2ea121;
+  --ccm-chart-G700: #237b19;
+  --ccm-chart-G800: #186010;
+  --ccm-chart-G900: #124b0c;
+  --ccm-chart-N00: #fff;
+  --ccm-chart-N50: #f5f6f7;
+  --ccm-chart-N100: #f2f3f5;
+  --ccm-chart-N200: #eff0f1;
+  --ccm-chart-N300: #dee0e3;
+  --ccm-chart-N400: #bbbfc4;
+  --ccm-chart-N500: #8f959e;
+  --ccm-chart-N600: #646a73;
+  --ccm-chart-N650: #51565d;
+  --ccm-chart-N700: #373c43;
+  --ccm-chart-N800: #2b2f36;
+  --ccm-chart-N900: #1f2329;
+  --ccm-chart-N1000: #000;
+  --ccm-chart-L50: #f7fae5;
+  --ccm-chart-L100: #eef6c6;
+  --ccm-chart-L200: #dfee96;
+  --ccm-chart-L300: #d2e76a;
+  --ccm-chart-L400: #c3dd40;
+  --ccm-chart-L500: #b3d600;
+  --ccm-chart-L600: #8fac02;
+  --ccm-chart-L700: #667901;
+  --ccm-chart-L800: #495700;
+  --ccm-chart-L900: #354200;
+  --ccm-chart-C50: #fef1f8;
+  --ccm-chart-C100: #fdddef;
+  --ccm-chart-C200: #f9aed9;
+  --ccm-chart-C300: #f57ac0;
+  --ccm-chart-C400: #f14ba9;
+  --ccm-chart-C500: #f01d94;
+  --ccm-chart-C600: #c71077;
+  --ccm-chart-C700: #9e1361;
+  --ccm-chart-C800: #7a0f4b;
+  --ccm-chart-C900: #520a32;
+  --ccm-chart-V50: #fceefc;
+  --ccm-chart-V100: #f8def8;
+  --ccm-chart-V200: #efb9ef;
+  --ccm-chart-V300: #e58fe5;
+  --ccm-chart-V400: #db66db;
+  --ccm-chart-V500: #d136d1;
+  --ccm-chart-V600: #b220b2;
+  --ccm-chart-V700: #8c218c;
+  --ccm-chart-V800: #681268;
+  --ccm-chart-V900: #460b46;
+  --ccm-chart-I50: #f2f3fd;
+  --ccm-chart-I100: #e0e2fa;
+  --ccm-chart-I200: #b4b9f3;
+  --ccm-chart-I300: #7b83ea;
+  --ccm-chart-I400: #616ae5;
+  --ccm-chart-I500: #4954e6;
+  --ccm-chart-I600: #2933c7;
+  --ccm-chart-I700: #161fa2;
+  --ccm-chart-I800: #0a1285;
+  --ccm-chart-I900: #0c1264;
+}
+
+body[theme-mode="dark"] {
+  --ccm-chart-B50: #151f33;
+  --ccm-chart-B100: #192a4c;
+  --ccm-chart-B200: #203e78;
+  --ccm-chart-B300: #2851a3;
+  --ccm-chart-B400: #2e65d1;
+  --ccm-chart-B500: #4c88ff;
+  --ccm-chart-B600: #70a0ff;
+  --ccm-chart-B700: #9bf;
+  --ccm-chart-B800: #b8cfff;
+  --ccm-chart-B900: #cedfff;
+  --ccm-chart-W50: #142930;
+  --ccm-chart-W100: #173742;
+  --ccm-chart-W200: #225b70;
+  --ccm-chart-W300: #2782a3;
+  --ccm-chart-W400: #2ea5d1;
+  --ccm-chart-W500: #42bdeb;
+  --ccm-chart-W600: #5fd4fe;
+  --ccm-chart-W700: #89dffe;
+  --ccm-chart-W800: #c2eeff;
+  --ccm-chart-W900: #def6ff;
+  --ccm-chart-P50: #281745;
+  --ccm-chart-P100: #361d61;
+  --ccm-chart-P200: #4d2691;
+  --ccm-chart-P300: #6533bd;
+  --ccm-chart-P400: #7c4ad4;
+  --ccm-chart-P500: #9762f5;
+  --ccm-chart-P600: #a472fc;
+  --ccm-chart-P700: #b990ff;
+  --ccm-chart-P800: #d3bafd;
+  --ccm-chart-P900: #e3d4ff;
+  --ccm-chart-Y50: #382e0c;
+  --ccm-chart-Y100: #574711;
+  --ccm-chart-Y200: #8f7211;
+  --ccm-chart-Y300: #c99d08;
+  --ccm-chart-Y400: #f0bb0a;
+  --ccm-chart-Y500: #fac823;
+  --ccm-chart-Y600: #fcd456;
+  --ccm-chart-Y700: #ffde75;
+  --ccm-chart-Y800: #ffe694;
+  --ccm-chart-Y900: #fcefc2;
+  --ccm-chart-R50: #361918;
+  --ccm-chart-R100: #4a1d1b;
+  --ccm-chart-R200: #6b2827;
+  --ccm-chart-R300: #9e3836;
+  --ccm-chart-R400: #cc4743;
+  --ccm-chart-R500: #f05b56;
+  --ccm-chart-R600: #fa7873;
+  --ccm-chart-R700: #ff9c99;
+  --ccm-chart-R800: #fec6c3;
+  --ccm-chart-R900: #ffe0e0;
+  --ccm-chart-O50: #33210b;
+  --ccm-chart-O100: #57330a;
+  --ccm-chart-O200: #845117;
+  --ccm-chart-O300: #bd7017;
+  --ccm-chart-O400: #de8218;
+  --ccm-chart-O500: #f2962c;
+  --ccm-chart-O600: #f5a54a;
+  --ccm-chart-O700: #fabc75;
+  --ccm-chart-O800: #ffd8ac;
+  --ccm-chart-O900: #ffeace;
+  --ccm-chart-T50: #162e2b;
+  --ccm-chart-T100: #153d38;
+  --ccm-chart-T200: #23665d;
+  --ccm-chart-T300: #269687;
+  --ccm-chart-T400: #37b8a6;
+  --ccm-chart-T500: #41ccb9;
+  --ccm-chart-T600: #5cdbca;
+  --ccm-chart-T700: #7febdc;
+  --ccm-chart-T800: #b7f7ef;
+  --ccm-chart-T900: #daf9f5;
+  --ccm-chart-G50: #193016;
+  --ccm-chart-G100: #1f471b;
+  --ccm-chart-G200: #296b22;
+  --ccm-chart-G300: #339428;
+  --ccm-chart-G400: #3bb02e;
+  --ccm-chart-G500: #54c248;
+  --ccm-chart-G600: #6dd162;
+  --ccm-chart-G700: #92de89;
+  --ccm-chart-G800: #bdf0b8;
+  --ccm-chart-G900: #d6f5d2;
+  --ccm-chart-N00: #0a0a0a;
+  --ccm-chart-N50: #1a1a1a;
+  --ccm-chart-N100: #292929;
+  --ccm-chart-N200: #373737;
+  --ccm-chart-N300: #434343;
+  --ccm-chart-N400: #5f5f5f;
+  --ccm-chart-N500: #757575;
+  --ccm-chart-N600: #a6a6a6;
+  --ccm-chart-N650: #cfcfcf;
+  --ccm-chart-N700: #e0e0e0;
+  --ccm-chart-N800: #e8e8e8;
+  --ccm-chart-N900: #ebebeb;
+  --ccm-chart-N1000: #fff;
+  --ccm-chart-L50: #2e3605;
+  --ccm-chart-L100: #495706;
+  --ccm-chart-L200: #6d8205;
+  --ccm-chart-L300: #91ad02;
+  --ccm-chart-L400: #abc912;
+  --ccm-chart-L500: #b9d627;
+  --ccm-chart-L600: #c7e04d;
+  --ccm-chart-L700: #d6ea75;
+  --ccm-chart-L800: #e7f5a6;
+  --ccm-chart-L900: #f6ffcc;
+  --ccm-chart-C50: #421b31;
+  --ccm-chart-C100: #5c2542;
+  --ccm-chart-C200: #91376a;
+  --ccm-chart-C300: #ad407e;
+  --ccm-chart-C400: #cc4792;
+  --ccm-chart-C500: #e352a3;
+  --ccm-chart-C600: #ed66b3;
+  --ccm-chart-C700: #ff91cf;
+  --ccm-chart-C800: #ffbde2;
+  --ccm-chart-C900: #ffdbef;
+  --ccm-chart-V50: #3b153b;
+  --ccm-chart-V100: #4f1c4f;
+  --ccm-chart-V200: #7a287a;
+  --ccm-chart-V300: #943b94;
+  --ccm-chart-V400: #b54ab5;
+  --ccm-chart-V500: #d457d4;
+  --ccm-chart-V600: #de73de;
+  --ccm-chart-V700: #e898e8;
+  --ccm-chart-V800: #f2bff2;
+  --ccm-chart-V900: #fbdafb;
+  --ccm-chart-I50: #1d1f47;
+  --ccm-chart-I100: #262a5e;
+  --ccm-chart-I200: #353b8c;
+  --ccm-chart-I300: #4149b5;
+  --ccm-chart-I400: #4c55d4;
+  --ccm-chart-I500: #5f69ed;
+  --ccm-chart-I600: #737beb;
+  --ccm-chart-I700: #9ea5ff;
+  --ccm-chart-I800: #bbc0f6;
+  --ccm-chart-I900: #d2d5fd;
+}
+
+html,
+body {
+  background: transparent !important;
+}
+
+html {
+  --text-title: rgba(31, 35, 41, 1);
+}
+
+.main {
+  display: flex;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.main-config {
+  border-top: rgba(222, 224, 227, 1) 1px solid;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.config-panel {
+  width: 340px;
+  flex: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-direction: column;
+  border-left: rgba(222, 224, 227, 1) 1px solid;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form {
+  flex-grow: 1;
+}
+
+.form-item {
+  margin-bottom: 16px;
+  color: var(--text-title);
+}
+
+.label {
+  padding-bottom: 8px;
+  font-family: PingFang SC;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+
+.btn {
+  align-self: flex-end;
+}
+
+.container {
+  width: 100%;
+  border: none;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.url-empty {
+  color: #666c75;
+  font-family: PingFang SC;
+  font-size: 14px;
+}
