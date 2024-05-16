@@ -1,3 +1,5 @@
 {
-  "title":"这是英文标题"
+  "label.link": "Embed URL",
+  "placeholder.link": "Enter the URL of the page you want to embed",
+  "placeholder.urlEmpty": "Please set the URL of the page you want to embed"
 }

@@ -1,3 +1,5 @@
 {
-  "title":"这是中文标题"
+  "label.link": "网页链接:",
+  "placeholder.link": "请输入需要嵌入的网页链接",
+  "placeholder.urlEmpty": "请配置需要嵌入的网页链接"
 }

@@ -1,9 +1,8 @@
 import React from 'react';
-import { dashboard, bitable, DashboardState } from "@lark-base-open/js-sdk";
-import { useState, useEffect, useRef, useCallback } from 'react';
-import { Button, ConfigProvider, Input } from 'antd';
-import enUS from 'antd/locale/en_US';
-import zhCN from 'antd/locale/zh_CN';
+import { useTranslation } from "react-i18next";
+import { dashboard, DashboardState } from "@lark-base-open/js-sdk";
+import { useState, useEffect, useCallback } from 'react';
+import { Button, Input, Image, Space } from '@douyinfe/semi-ui';
 import './App.css';
 import classnames from 'classnames'
 import { debounce } from 'lodash';
@@ -15,17 +14,17 @@ interface IPreviewConfig {
 
 function App() {
 
-  const [locale, setLocale] = useState(zhCN);
-
   const [config, setConfig] = useState<IPreviewConfig>({
-    url: ""
-  })
+    url: "",
+  });
 
   const [inputValue, setInputValue] = useState('');
 
   const isCreate = dashboard.state === DashboardState.Create
   /** 是否配置模式下 */
   const isConfig = dashboard.state === DashboardState.Config || isCreate;
+
+  const { t } = useTranslation();
 
   const updateConfig = (res: any) => {
     const { customConfig } = res;
@@ -85,37 +84,33 @@ function App() {
       'main': true,
     })}>
 
-      <ConfigProvider locale={locale}>
-
-        <div className='content'>
-          {config.url ? (
-            <iframe className="container" src={config.url} />
-          ) : (
-            <center className="container">请输入需要嵌入的网页链接</center>
-          )}
-        </div>
-        {
-          isConfig && (
-            <div className='config-panel'>
-              <div className='form'>
-                <div className='form-item'>
-                  <div className='label'>网页链接:</div>
-                  <Input value={inputValue} placeholder="请输入需要嵌入的网页链接" onChange={(e) => setInputValue(e.target.value)}></Input>
-                </div>
+      <div className='content'>
+        {config.url ? (
+          <iframe className="container" src={config.url} />
+        ) : (
+          <center className="container">
+            <Space vertical>
+              <Image src="./empty.svg" preview={false} />
+              <span className="url-empty">{t("placeholder.urlEmpty")}</span>
+            </Space>
+          </center>
+        )}
+      </div>
+      {
+        isConfig && (
+          <div className='config-panel'>
+            <div className='form'>
+              <div className='form-item'>
+                <div className='label'>{t("label.link")}</div>
+                <Input value={inputValue} placeholder={t("placeholder.link")} onChange={setInputValue}></Input>
               </div>
-              <Button
-                className='btn'
-                size="middle"
-                type="primary"
-                autoInsertSpace={false}
-                onClick={saveConfig}
-              >
-                确定
-              </Button>
             </div>
-          )
-        }
-      </ConfigProvider>
+            <Button type="primary" theme="solid" className="btn" onClick={saveConfig}>
+              确定
+            </Button>
+          </div>
+        )
+      }
     </main>
   );
 }

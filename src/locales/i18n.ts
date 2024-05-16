@@ -1,34 +1,23 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
-import { bitable } from "@lark-base-open/js-sdk";
 import translationEN from "./en.json";
 import translationZH from "./zh.json";
 
-const resources = {
-  zh: {
-    translation: translationZH,
-  },
-  en: {
-    translation: translationEN,
-  },
-};
-
-i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    resources,
-    fallbackLng: "en", // 指定降级文案为英文
+export function initI18n(lang: any) {
+  // 初始化 i18n
+  i18n.use(initReactI18next).init({
+    resources: {
+      en: {
+        translation: translationEN,
+      },
+      zh: {
+        translation: translationZH,
+      },
+    },
+    lng: lang, // 设置默认语言
+    fallbackLng: "en", // 如果没有对应的语言文件，则使用默认语言
     interpolation: {
-      escapeValue: false,
+      escapeValue: false, // 不进行 HTML 转义
     },
   });
-
-bitable.bridge.getLanguage().then((lng) => {
-  if (i18n.language !== lng) {
-    i18n.changeLanguage(lng);
-  }
-});
-
-export default i18n;
+}
