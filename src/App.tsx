@@ -1,9 +1,9 @@
-import React from 'react';
 import { useTranslation } from "react-i18next";
 import { dashboard, DashboardState } from "@lark-base-open/js-sdk";
-import { useState, useEffect, useCallback } from 'react';
-import { Button, Input, Image, Space } from '@douyinfe/semi-ui';
-import './App.css';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Button, Input, Image, Space, Form } from '@douyinfe/semi-ui';
+import { useTheme, useConfig } from "./hooks/index";
+import './App.scss';
 import classnames from 'classnames'
 import { debounce } from 'lodash';
 
@@ -13,6 +13,8 @@ interface IPreviewConfig {
 }
 
 function App() {
+
+  useTheme();
 
   const [config, setConfig] = useState<IPreviewConfig>({
     url: "",
@@ -36,27 +38,9 @@ function App() {
         dashboard.setRendered();
       }, 3000);
     }
-  }
+  };
 
-  React.useEffect(() => {
-    // getV();
-    if (isCreate) {
-      return
-    }
-    // 初始化获取配置
-    dashboard.getConfig().then(updateConfig);
-  }, []);
-
-
-  React.useEffect(() => {
-    const offConfigChange = dashboard.onConfigChange((r) => {
-      // 监听配置变化，协同修改配置
-      updateConfig(r.data);
-    });
-    return () => {
-      offConfigChange();
-    }
-  }, []);
+  useConfig(updateConfig);
 
   const debounceSetConfig = useCallback(debounce((value: string) => {
     setConfig({
@@ -83,7 +67,6 @@ function App() {
       'main-config': isConfig,
       'main': true,
     })}>
-
       <div className='content'>
         {config.url ? (
           <iframe className="container" src={config.url} />
@@ -99,12 +82,12 @@ function App() {
       {
         isConfig && (
           <div className='config-panel'>
-            <div className='form'>
+            <Form className='form'>
               <div className='form-item'>
-                <div className='label'>{t("label.link")}</div>
-                <Input value={inputValue} placeholder={t("placeholder.link")} onChange={setInputValue}></Input>
+                <Form.Label className='label'>{t("label.link")}</Form.Label>
+                <Input value={inputValue}  placeholder={t("placeholder.link")} onChange={setInputValue}></Input>
               </div>
-            </div>
+            </Form>
             <Button type="primary" theme="solid" className="btn" onClick={saveConfig}>
               确定
             </Button>
