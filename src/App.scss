@@ -134,6 +134,7 @@ body[theme-mode="light"] {
   --ccm-chart-I700: #161fa2;
   --ccm-chart-I800: #0a1285;
   --ccm-chart-I900: #0c1264;
+  --line-color: rgba(235, 235, 235, 0.15);  
 }
 
 body[theme-mode="dark"] {
@@ -270,6 +271,7 @@ body[theme-mode="dark"] {
   --ccm-chart-I700: #9ea5ff;
   --ccm-chart-I800: #bbc0f6;
   --ccm-chart-I900: #d2d5fd;
+  --line-color: rgba(207, 207, 207, 0.15);
 }
 
 html,
@@ -288,7 +290,7 @@ html {
 }
 
 .main-config {
-  border-top: rgba(222, 224, 227, 1) 1px solid;
+  border-top: var(--line-color) 1px solid;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -308,7 +310,7 @@ html {
   justify-content: flex-start;
   gap: 20px;
   flex-direction: column;
-  border-left: rgba(222, 224, 227, 1) 1px solid;
+  border-left: var(--line-color) 1px solid;
   padding: 20px;
   box-sizing: border-box;
 }
