@@ -134,7 +134,7 @@ body[theme-mode="light"] {
   --ccm-chart-I700: #161fa2;
   --ccm-chart-I800: #0a1285;
   --ccm-chart-I900: #0c1264;
-  --line-color: rgba(235, 235, 235, 0.15);  
+  --line-color: #DFE0E3;  
 }
 
 body[theme-mode="dark"] {
@@ -335,6 +335,11 @@ html {
 
 .btn {
   align-self: flex-end;
+  padding: 0 30px;
+}
+
+.input {
+  border: var(--line-color) 1px solid;
 }
 
 .container {
