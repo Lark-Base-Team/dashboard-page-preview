@@ -5,7 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Base Script</title>
-    <script src="https://lf3-static.bytednsdoc.com/obj/eden-cn/ulwv_lzhi_ryhs/ljhwZthlaukjlkulzlp/dashboard/check_mobile.js"></script>
+    <script>
+  function isMobileLark() {
+    const ua = window.navigator.userAgent;
+    const isLark = /feishu/i.test(ua) || /lark/i.test(ua);
+    const isMobile = /mobile|android|iphone|ipad|phone/i.test(ua);
+    return isLark && isMobile;
+  }
+  if (isMobileLark()) {
+    // 满足一定条件的时候，重定向到图片
+    window.location.href = "https://ext.baseopendev.com/ext/dashboard_mobile_disable/15df90854c1df2ee133777156b96758ec20c6e02/index.html";
+
+    // 阻止后续内容加载
+    document.head.insertAdjacentHTML(
+      "beforeend",
+      `<meta http-equiv="Content-Security-Policy" content="script-src 'none'">`
+    );
+  }
+
+</script>
   </head>
   <body>
     <div id="root"></div>
