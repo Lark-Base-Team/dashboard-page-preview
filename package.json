@@ -4,6 +4,7 @@
   "type": "module",
   "description": "React TypeScript on Replit, using Vite bundler",
   "keywords": [],
+  "output": "dist",
   "author": "",
   "license": "ISC",
   "scripts": {
