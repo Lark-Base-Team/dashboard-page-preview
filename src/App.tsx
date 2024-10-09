@@ -3,6 +3,7 @@ import { dashboard, DashboardState } from "@lark-base-open/js-sdk";
 import React, { useState, useEffect, useCallback } from "react";
 import { Button, Input, Image, Space, Form } from "@douyinfe/semi-ui";
 import { useTheme, useConfig } from "./hooks/index";
+import '@lark-base-open/js-sdk/dist/style/dashboard.css';
 import "./App.scss";
 import classnames from "classnames";
 import { debounce } from "lodash";
@@ -12,7 +13,7 @@ interface IPreviewConfig {
 }
 
 function App() {
-  useTheme();
+  const { bgColor } = useTheme();
 
   const [config, setConfig] = useState<IPreviewConfig>({
     url: "",
@@ -64,12 +65,7 @@ function App() {
   }
 
   return (
-    <main
-      className={classnames({
-        "main-config": isConfig,
-        main: true,
-      })}
-    >
+    <main style={{backgroundColor: bgColor}} className={classnames({"main-config": isConfig, main: true})}>
       <div className="content">
         {config.url ? (
           <iframe className="container" src={config.url} />
