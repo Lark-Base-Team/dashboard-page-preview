@@ -35,7 +35,7 @@ function App() {
       setTimeout(() => {
         // 预留3s给浏览器进行渲染，3s后告知服务端可以进行截图了
         dashboard.setRendered();
-      }, 3000);
+      }, 1000 * 25); // 3秒可能太短了，多一点试试
     }
   };
 
