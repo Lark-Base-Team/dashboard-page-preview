@@ -34,6 +34,7 @@ export function useConfig(updateConfig: (data: any) => void) {
     if (isCreate) {
       return
     }
+    console.log('====useConfig = 初始化', dashboard.state);
     // 初始化获取配置
     dashboard.getConfig().then(updateConfig);
   }, []);
@@ -41,6 +42,7 @@ export function useConfig(updateConfig: (data: any) => void) {
 
   React.useEffect(() => {
     const offConfigChange = dashboard.onConfigChange((r) => {
+      console.log('====useConfig = onConfigChange', r.data);
       // 监听配置变化，协同修改配置
       updateConfig(r.data);
     });

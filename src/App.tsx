@@ -29,6 +29,8 @@ function App() {
 
   const updateConfig = (res: any) => {
     const { customConfig } = res;
+    console.log('====App updateConfig', customConfig);
+
     if (customConfig) {
       setConfig(customConfig as any);
       setInputValue(customConfig.url);
@@ -64,8 +66,10 @@ function App() {
     } as any);
   }
 
+  console.log('====App config', config);
+
   return (
-    <main style={{backgroundColor: bgColor}} className={classnames({"main-config": isConfig, main: true})}>
+    <main style={{ backgroundColor: bgColor }} className={classnames({ "main-config": isConfig, main: true })}>
       <div className="content">
         {config.url ? (
           <iframe className="container" src={config.url} />
