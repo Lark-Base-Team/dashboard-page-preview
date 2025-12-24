@@ -12,16 +12,16 @@
     const isMobile = /mobile|android|iphone|ipad|phone/i.test(ua);
     return isLark && isMobile;
   }
-  if (isMobileLark()) {
-    // 满足一定条件的时候，重定向到图片
-    window.location.href = "https://ext.baseopendev.com/ext/dashboard_mobile_disable/14c264309a784b577484d14f227664050a115ed7/index.html";
+  // if (isMobileLark()) {
+  //   // 满足一定条件的时候，重定向到图片
+  //   window.location.href = "https://ext.baseopendev.com/ext/dashboard_mobile_disable/14c264309a784b577484d14f227664050a115ed7/index.html";
 
-    // 阻止后续内容加载
-    document.head.insertAdjacentHTML(
-      "beforeend",
-      `<meta http-equiv="Content-Security-Policy" content="script-src 'none'">`
-    );
-  }
+  //   // 阻止后续内容加载
+  //   document.head.insertAdjacentHTML(
+  //     "beforeend",
+  //     `<meta http-equiv="Content-Security-Policy" content="script-src 'none'">`
+  //   );
+  // }
 
 </script>
   </head>
