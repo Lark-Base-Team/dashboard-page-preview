@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { dashboard, DashboardState } from "@lark-base-open/js-sdk";
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { Button, Input, Image, Space, Form } from "@douyinfe/semi-ui";
 import { useTheme, useConfig } from "./hooks/index";
 import '@lark-base-open/js-sdk/dist/style/dashboard.css';
@@ -68,10 +68,19 @@ function App() {
 
   console.log('====App config', config);
 
+  const isUrlValid = useMemo(() => {
+    try {
+      new URL(config.url);
+      return true
+    } catch (e) {
+      return false;
+    }
+  }, [config.url]);
+
   return (
     <main style={{ backgroundColor: bgColor }} className={classnames({ "main-config": isConfig, main: true })}>
       <div className="content">
-        {config.url ? (
+        {isUrlValid ? (
           <iframe className="container" src={config.url} />
         ) : (
           <center className="container">
